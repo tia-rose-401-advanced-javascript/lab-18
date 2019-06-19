@@ -10,7 +10,7 @@
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json .",
     "start": "node server.js",
     "app": "node app.js ./files/test.txt",
-    "log": "node ./events/logger.js"
+    "log": "node logger.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/tia-rose-401-advanced-javascript/lab-18#readme",
   "dependencies": {
     "eslint": "^5.16.0",
+    "faker": "^4.1.0",
     "jest": "^24.8.0",
     "socket.io": "^2.2.0",
     "socket.io-client": "^2.2.0"
