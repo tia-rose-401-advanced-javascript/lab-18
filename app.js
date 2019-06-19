@@ -12,10 +12,10 @@ const alterFile = (file) => {
   alter.readFile(file)
     .then(data => {
       alter.writeFile(file, alter.upper(data));
-      socket.emit('speak', faker.random.words());
+      socket.emit('file-save', faker.random.words());
     })
     .catch(error => {
-      socket.emit('error', error);
+      socket.emit('file-error', error);
     });
 };
 
