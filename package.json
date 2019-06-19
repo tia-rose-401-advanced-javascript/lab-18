@@ -1,0 +1,33 @@
+{
+  "name": "lab-18",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json .",
+    "start": "node server.js",
+    "app": "node app.js test.text",
+    "log": "node ./events/logger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tia-rose-401-advanced-javascript/lab-18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tia-rose-401-advanced-javascript/lab-18/issues"
+  },
+  "homepage": "https://github.com/tia-rose-401-advanced-javascript/lab-18#readme",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "devDependencies": {}
+}
