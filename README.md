@@ -1,7 +1,7 @@
 # LAB - 18
 
 ## Project Name
-TCP Server / Message Application
+Socket.io
 
 ### Author: Tia Rose
 
@@ -16,18 +16,26 @@ TCP Server / Message Application
 
 
 #### Running the app
-* node server.js
-* node app.js test.text
-* node ./events/logger.js
+  * npm run start or `node ./server/server.js`
+  * npm run app or `node ./app/app.js ./files/test.txt`
+  * npm run err or `node ./app/app.js ./files/error.txt`
+  * npm run log or `node ./logger/logger.js`
   
 #### Tests
 * How do you run tests?
+
 `npm run test`
 
 * What assertions were made?
 
+app-test : is readFile defined, does upper make text uppercase
+
+logger-test have console.log and error been called
+
 * What assertions need to be / should be made?
+
 Make sure messages were sent
+
 Make sure messages were consoled both saved and error
 
 #### UML

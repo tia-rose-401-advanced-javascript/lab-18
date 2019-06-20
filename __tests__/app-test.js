@@ -1,6 +1,5 @@
 'use strict';
 
-let app = require('../app/app');
 let alter = require('../mod/alter');
 
 jest.mock('fs');
