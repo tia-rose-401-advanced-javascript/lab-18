@@ -14,13 +14,7 @@ const alterFile = (file) => {
       alter.writeFile(file, alter.upper(data));
       socket.emit('file-save', file);
     })
-    .catch(() => {
-      let error = {
-        name: 'error',
-      };
-
-      socket.emit('file-error', JSON.stringify(error));
-    });
+    .catch(error => socket.emit('file-error'), 500);
 };
 
 
