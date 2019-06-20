@@ -28,7 +28,7 @@ TCP Server / Message Application
 
 * What assertions need to be / should be made?
 Make sure messages were sent
-Make sure messages were consoled
+Make sure messages were consoled both saved and error
 
 #### UML
 ![UML](./assets/UML-18.JPG)

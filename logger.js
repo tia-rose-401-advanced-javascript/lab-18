@@ -7,4 +7,9 @@ let logMessage = payload => {
   console.log('I heard this message:', payload);
 };
 
+let logError = () => {
+  console.error('ERROR: something went wrong');
+};
+
 socket.on('message', logMessage);
+socket.on('file-error', logError);

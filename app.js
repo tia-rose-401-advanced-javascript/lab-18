@@ -14,8 +14,15 @@ const alterFile = (file) => {
       alter.writeFile(file, alter.upper(data));
       socket.emit('file-save', faker.random.words());
     })
-    .catch(error => {
-      socket.emit('file-error', error);
+    // .catch(error => {
+    //   socket.emit('file-error', error); //error with
+    // });
+    .catch(() => {
+      let error = {
+        name: 'error',
+      };
+
+      socket.emit('file-error', JSON.stringify(error));
     });
 };
 

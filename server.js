@@ -10,10 +10,11 @@ io.on('connection', socket => {
   // });
 
   socket.on('file-save', payload => {
-    socket.emit('message', payload);
+    io.emit('message', payload);
   });
   
+
   socket.on('file-error', payload => {
-    socket.emit('message', payload);
+    io.emit('file-error', payload);
   });
 });
