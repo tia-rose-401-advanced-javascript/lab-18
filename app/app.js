@@ -1,10 +1,10 @@
 'use strict';
 
-const alter = require('./mod/alter');
+const alter = require('../mod/alter');
 
 const io = require('socket.io-client');
 const socket = io.connect('http://localhost:3000');
-const faker = require('faker');
+
 
 
 const alterFile = (file) => {
@@ -12,11 +12,8 @@ const alterFile = (file) => {
   alter.readFile(file)
     .then(data => {
       alter.writeFile(file, alter.upper(data));
-      socket.emit('file-save', faker.random.words());
+      socket.emit('file-save', file);
     })
-    // .catch(error => {
-    //   socket.emit('file-error', error); //error with
-    // });
     .catch(() => {
       let error = {
         name: 'error',
