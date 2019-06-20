@@ -8,9 +8,10 @@
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json .",
-    "start": "node server.js",
-    "app": "node app.js test.text",
-    "log": "node ./events/logger.js"
+    "start": "node ./server/server.js",
+    "app": "node ./app/app.js ./files/test.txt",
+    "err": "node ./app/app.js ./files/error.txt",
+    "log": "node ./logger/logger.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/tia-rose-401-advanced-javascript/lab-18#readme",
   "dependencies": {
     "eslint": "^5.16.0",
+    "faker": "^4.1.0",
     "jest": "^24.8.0",
     "socket.io": "^2.2.0",
     "socket.io-client": "^2.2.0"
