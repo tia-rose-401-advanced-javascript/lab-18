@@ -13,3 +13,5 @@ let logError = () => {
 
 socket.on('file-save', logMessage);
 socket.on('file-error', logError);
+
+module.exports = {logMessage, logError};
